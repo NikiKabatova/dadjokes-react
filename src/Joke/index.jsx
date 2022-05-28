@@ -12,20 +12,20 @@ export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
       </div>
       <div className="joke__likes">
         <button
-          onClick={() => setLikes(likes + 1)}
+          onClick={() => setLike(like + 1)}
           id="btn-up"
           className="btn-like btn-like--up"
         ></button>
         <span id="likes-up" className="likes-count likes-count--up">
-          {likes}
+          {like}
         </span>
         <button
-          onClick={() => setDislikes(dislikes + 1)}
+          onClick={() => setDislike(dislike + 1)}
           id="btn-down"
           className="btn-like btn-like--down"
         ></button>
         <span id="likes-down" className="likes-count likes-count--down">
-          {dislikes}
+          {dislike}
         </span>
       </div>
     </div>
