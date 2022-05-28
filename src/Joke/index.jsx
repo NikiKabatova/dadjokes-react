@@ -1,6 +1,12 @@
 import React from 'react';
 import './style.css';
+import { useState } from 'react';
+
 export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
+  const [like, setLike] = useState(0);
+  const [dislike, setDislike] = useState(0);
+  // const handleLikes = () => setLikes(likes + 1);
+  // const handleDislikes = () => setDislikes(dislikes + 1);
   return (
     <div className="joke">
       <div className="joke__body">
@@ -14,7 +20,7 @@ export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
             id="btn-up"
             className="btn-like btn-like--up"
             onClick={() => {
-              likes();
+              setLike(like + 1);
             }}
           ></button>
           <span id="likes-up" className="likes-count likes-count--up">
@@ -24,7 +30,7 @@ export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
             id="btn-down"
             className="btn-like btn-like--down"
             onClick={() => {
-              dislikes();
+              setDislike(dislike + 1);
             }}
           ></button>
           <span id="likes-down" className="likes-count likes-count--down">

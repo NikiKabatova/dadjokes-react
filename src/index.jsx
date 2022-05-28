@@ -6,11 +6,6 @@ import { Joke } from './Joke/INDEX';
 import { jokes } from './jokes';
 
 const App = () => {
-  const [like, setLike] = useState(0);
-  const [dislike, setDislike] = useState(0);
-
-  const handleLikes = () => setLike(like + 1);
-  const handleDislikes = () => setDislike(dislike + 1);
   return (
     <div className="container">
       {jokes.map((item) => (
@@ -19,8 +14,8 @@ const App = () => {
           userAvatar={item.avatar}
           userName={item.name}
           text={item.text}
-          likes={handleLikes}
-          dislikes={handleDislikes}
+          likes={item.likes}
+          dislikes={item.dislikes}
         />
       ))}
     </div>
