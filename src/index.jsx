@@ -2,8 +2,9 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { useState } from 'react';
 import './style.css';
-import { Joke } from './Joke/INDEX';
+
 import { jokes } from './jokes';
+import { Joke } from './Joke/index';
 
 const App = () => {
   return (
