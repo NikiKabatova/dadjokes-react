@@ -3,8 +3,8 @@ import './style.css';
 import { useState } from 'react';
 
 export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
-  const [like, setLike] = useState(0);
-  const [dislike, setDislike] = useState(0);
+  const [like, setLike] = useState(likes);
+  const [dislike, setDislike] = useState(dislikes);
   // const handleLikes = () => setLikes(likes + 1);
   // const handleDislikes = () => setDislikes(dislikes + 1);
   return (
