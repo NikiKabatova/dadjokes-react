@@ -5,6 +5,7 @@ import './style.css';
 
 const App = () => {
   const [likes, setLikes] = useState(0);
+  const [dislikes, setDislikes] = useState(0);
   return (
     <div className="container">
       <div className="joke">
@@ -33,14 +34,12 @@ const App = () => {
             {likes}
           </span>
           <button
-            onClick={() => {
-              console.log('dis-like');
-            }}
+            onClick={() => setDislikes(dislikes + 1)}
             id="btn-down"
             className="btn-like btn-like--down"
           ></button>
           <span id="likes-down" className="likes-count likes-count--down">
-            0
+            {dislikes}
           </span>
         </div>
       </div>
